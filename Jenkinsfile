@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/shabzeersha-maker/django-devops-demo.git'
+                git branch: 'main', url: 'https://github.com/shabzeersha-maker/django-devops-demo.git'
             }
         }
 

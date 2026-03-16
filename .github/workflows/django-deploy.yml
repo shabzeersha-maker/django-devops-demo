@@ -37,8 +37,8 @@ jobs:
           username: ubuntu
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /home/ubuntu/django-app
-            python3 -m venv venv
+            cd /home/ubuntu/django-devops-demo
+            python3 -m venv venv || true
             source venv/bin/activate
             pip install -r requirements.txt
             python manage.py migrate
